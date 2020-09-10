@@ -15,7 +15,6 @@ job_release:
     stage: release
     only:
         - tags
-    image: registry.sprd.net/sprd/ci/curlpine-jq:3.3
     script:
         - "mvn deploy"
 

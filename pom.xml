@@ -144,19 +144,6 @@
 
     </dependencies>
 
-    <repositories>
-        <repository>
-            <id>camunda-bpm-nexus</id>
-            <url>https://app.camunda.com/nexus/content/groups/public/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-
     <build>
         <plugins>
             <plugin>

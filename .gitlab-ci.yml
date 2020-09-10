@@ -1,0 +1,21 @@
+image: registry.sprd.net/sprd/ci/maven-openjdk-11-nvm:3.6.1
+
+stages:
+    - test
+    - release
+
+job_test:
+    stage: test
+    retry: 1
+    script:
+        - "mvn clean"
+        - "mvn test"
+
+job_release:
+    stage: release
+    only:
+        - tags
+    image: registry.sprd.net/sprd/ci/curlpine-jq:3.3
+    script:
+        - "mvn deploy"
+
